@@ -11,8 +11,8 @@ import appeng.me.helpers.AENetworkProxy;
 import appeng.me.helpers.IGridProxyable;
 import appeng.me.helpers.MachineSource;
 import appeng.util.Platform;
-import io.github.phantamanta44.libnine.tile.L9TileEntityTicking;
 import io.github.phantamanta44.threng.ThrEng;
+import io.github.phantamanta44.threng.tile.L9TileEntityTickingWrapper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 
@@ -20,7 +20,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Optional;
 
-public abstract class TileAENetworked extends L9TileEntityTicking implements IActionHost, IGridProxyable, IReadyable {
+public abstract class TileAENetworked extends L9TileEntityTickingWrapper implements IActionHost, IGridProxyable, IReadyable {
 
     protected final IActionSource actionSource = new MachineSource(this);
     private final AENetworkProxy aeProxy = new AENetworkProxy(this, "aeproxy", getNetworkRepresentation(), true);

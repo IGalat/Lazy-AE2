@@ -5,11 +5,11 @@ import io.github.phantamanta44.libnine.capability.provider.CapabilityBrokerDirPr
 import io.github.phantamanta44.libnine.component.reservoir.IIntReservoir;
 import io.github.phantamanta44.libnine.component.reservoir.RatedIntReservoir;
 import io.github.phantamanta44.libnine.component.reservoir.SimpleIntReservoir;
-import io.github.phantamanta44.libnine.tile.L9TileEntityTicking;
 import io.github.phantamanta44.libnine.util.data.serialization.AutoSerialize;
+import io.github.phantamanta44.threng.tile.L9TileEntityTickingWrapper;
 import net.minecraftforge.energy.CapabilityEnergy;
 
-public abstract class TilePowered extends L9TileEntityTicking {
+public abstract class TilePowered extends L9TileEntityTickingWrapper {
 
     @AutoSerialize
     protected final IIntReservoir energy;
