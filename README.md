@@ -1,32 +1,29 @@
-# Lazy AE2 #
+Fork of https://github.com/phantamanta44/Lazy-AE2. If you aren't familiar with LazyAE, go read that.
 
-*AE2 for people who hate microcrafting*
+## Changes
 
-**Lazy AE2** adds a few more Applied Energistics machines that help speed up certain operations. It was designed with the intent of creating alternate channels for automating AE2's in-world crafting mechanisms, which had a tendency to clash with lag-clearing tools.
+Now requires [my fork of libnine](https://github.com/IGalat/libnine)
 
-![](show.png)
+### Level Maintainer
 
-![](ma_chamber.png)
+- Fixed the critical bug where numbers in all LMs would change when any LM ordered anything
+- Removed little numbers on items - duplicate info, already present in quantity slot
+- Removed checkboxes, as now they're unnecessary
 
-## New Features
 
-* **Fluix Aggregator** - Performs the in-world fluix crystal crafting operation
-* **Pulse Centrifuge** - Performs the in-world crystal seed growing operation
-* **ME Circuit Etcher** - Etches circuits without needing to waste time pressing the components
-* **Crystal Energizer** - Charges certus quartz more efficiently than the AE2 charger
-* **Preemptive Assembly Unit** - Alternative to the ME interface that dispatches crafting operations eagerly
-    *   Instead of dispatching a recipe one-at-a-time, as much of the recipe's inputs are dumped into the processing machine as possible
-    *   Useful for when you're late-game and your processing machines process faster than ME interfaces can provide ingredients
-* **ME Level Maintainer** - Maintains a quantity of certain items in an ME network by requesting autocrafting when needed
-* **Mass Assembly Chamber** - A really big multi-block molecular assembler. Goes fast and holds lots of patterns!
+### Big Assembler
 
-Everything is JEI-integrated, so you won't have to waste time guessing at recipes.
+- Removed little numbers on items - duplicate info, already present in quantity slot
 
-## Required Dependencies
+---
 
-*   [Applied Energistics 2](https://minecraft.curseforge.com/projects/applied-energistics-2) ([source](https://github.com/AppliedEnergistics/Applied-Energistics-2))
-*   [LibNine](https://minecraft.curseforge.com/projects/libnine) ([source](https://github.com/phantamanta44/libnine))
+---
 
-## CraftTweaker Support
+Notes to developers / reminder to me:
 
-Lazy AE2 has full CraftTweaker support for its processing recipes. Check out the documentation [in the wiki](https://github.com/phantamanta44/Lazy-AE2/wiki/CraftTweaker-API).
+Gradle version here is super duper old, forge version is also different.
+Because of this(?), `L9TileEntityTickingWrapper` exists.
+IDEA gradle reload on any issues.
+
+After `gradlew:77` add `JAVACMD="C:\Users\Ilya\.jdks\corretto-1.8.0_312\bin\java"` 
+or whatever jdk path unless it's same as JAVA_HOME
